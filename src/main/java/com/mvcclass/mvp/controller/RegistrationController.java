@@ -18,7 +18,7 @@ public class RegistrationController {
     @PostMapping("registration")
     public String setRegistration(@ModelAttribute("registration") Registration registration) {
         logger.info("Registration : " + registration.toString());
-        return "registration";
+        return "redirect:registration";
     }
 
     @GetMapping("registration")
