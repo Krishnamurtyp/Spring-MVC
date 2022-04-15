@@ -7,6 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <html>
 <head>
     <title>Registration</title>
@@ -19,7 +20,7 @@
         <div>
             <h1>Let us register you, asap!</h1>
             <form:form modelAttribute="registration">
-                <label for="inputName" class="form-label">Full name</label>
+                <label for="inputName" class="form-label"><spring:message code="name"/></label>
                 <form:input path="name" type="text" class="form-control" id="inputName" aria-describedby="nameHelp"/>
                 <div id="emailHelp" class="form-text">We'll never share your information with anyone else.</div>
                 <input type="submit" class="btn btn-primary" value="Add registration" />
